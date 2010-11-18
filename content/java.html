@@ -1,0 +1,55 @@
+{% extends "page.django" %}
+{# :mode=django: #}
+
+{%hyde
+ bg: url(http://farm4.static.flickr.com/3283/2659584605_0d5bde37bb_b.jpg)
+ panic: true
+ keywords: java is dead, java communities are dead, sun and java, java problems
+ title: Java
+ description: "Java is turning to a modern COBOL language. Developers are elsewhere. The exitement back in 2000 is gone."
+%}
+
+{% block facts %}
+<div class="fact">
+
+	<h3>Never amazing</h3>
+	
+	<p>					
+		During the life of Java nobody every implemented a large and successfull website with it. You can find many PHP or Ruby sites but no Java. The idea of a sexy Swing application is a joke. When it comes to serious development people just didn't use Java.
+	</p>
+	
+</div>
+
+<div class="fact">
+
+	<h3>Lot's of crap</h3>
+	
+	<p>
+		EJB is crap, Swing is ugly, JSF takes a wrong path and JavaFX will never make it. Groovy or Scala are noteworthly but they are not Java anymore. There is just no point in Java anymore. 
+	</p>
+	
+</div>			
+
+<div class="fact">
+
+	<h3>All trends go down</h3>
+	
+	<p>
+		Java bloggers and communities dead. Exitement and innovation is gone. On October 2010 Apple announced that they stop supporting Java. Even Apache may walk away. The situation is fatal. Java is too big to die. It just becomes our next COBOL.	
+	</p>
+	
+</div>			
+
+{% endblock %}
+
+{% block links %}
+<a href="http://www.google.com/trends?q=java">
+	Google Trends <small>Java goes down</small></a>
+	
+<a href="http://developer.apple.com/library/mac/#releasenotes/Java/JavaSnowLeopardUpdate3LeopardUpdate8RN/NewandNoteworthy/NewandNoteworthy.html">
+	Apple <small>Java is deprecated</small></a>
+
+<a href="http://www.readwriteweb.com/archives/apache_software_foundation_threatens_to_walk_away.php#more">
+	Apache <small>Walking away?</small></a>
+{% endblock %}
+

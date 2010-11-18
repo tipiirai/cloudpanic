@@ -1,0 +1,45 @@
+{% extends "page.django" %}
+{# :mode=django: #}
+
+{%hyde
+ bg: url(http://farm3.static.flickr.com/2315/2399469680_059cc2d3c5_o.jpg)
+ keywords: services, application organization, application hierarchy, split into services
+ title: Services
+ description: "Applications are messy. Avoid chaos by building Services with clean interfaces. It's the ultimate way to split your application and increase developer productivity."
+%}
+
+{% block facts %}
+<div class="fact">
+	<h3>Organize!</h3>
+	
+	<p>
+		You need to be organized if you want to scale. Think of your mess and how it can be split into services. Focus of interfaces. Use common sense and put time on this. What is important and what is not?
+	</p> 
+</div>			
+
+<div class="fact"> 
+	<h3>Coders love this</h3>
+	
+	<p>
+		Coders can use the programming language of their choice. There's only an interface to be implemented. Services talk to each other with JSON over HTTP. No strict rules or policies. Crazy pair programming times are over.
+	</p> 
+</div>			
+
+<div class="fact">
+	<h3>Bosses love this</h3>
+	
+	<p>					
+		Developer jobs are easy to assign. No complex dependencies or language restrictions. One coder per service perhaps? Services not only solve the application architecture but also what the organization is all about. 
+	</p> 
+</div>
+{% endblock %}
+
+{% block links %} 
+<a href="http://en.wikipedia.org/wiki/Representational_State_Transfer#RESTful_web_services">
+	Wikipedia <small>RESTful web services</small></a>
+
+<a href="http://blog.feedly.com/2009/03/03/jsonrest-vs-xmlsoap/">
+	Feedly <small>JSON/REST is superiour to XML/SOAP</small></a> 
+{% endblock %}
+
+
