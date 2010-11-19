@@ -23,7 +23,7 @@
 				 diff < 86400 && str("after _ hours", "_ hours ago", Math.floor(diff / 3600))) ||
 				 day_diff == 1 && (future ? "Tomorrow" : "Yesterday") ||
 				 day_diff < 7 && str("after _ days", "_ days ago", day_diff) ||
-				 str("after _ weeks", "_ weeks ago", Math.ceil( day_diff / 7 ))
+				 str("after _ weeks", "_ weeks ago", Math.ceil( day_diff / 7 ));
 	}
 	
 	function byId(id) {
@@ -35,6 +35,7 @@
 	
 	el = byId("after");
 	el.innerHTML = prettytime(el.innerHTML);
+	el.className = "loaded";
 		
 	// activate correct link 
 	var els = byId("navi").getElementsByTagName("a"),

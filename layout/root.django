@@ -5,18 +5,18 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0">
 	
-	<title>cloudpanic :: {{page.title|typogrify}}</title>
+	<title>{{page.title|typogrify}} @ CLOUD PANIC</title>
 	<meta name="description" content="{{page.description}}">
 	<meta name="keywords" content="{% firstof page.keywords keywords %}">	
 	<meta name="author" content="{{site.author}}">	
 	
-	<link rel="shortcut icon" href="media/favicon.ico">
-	<link rel="apple-touch-icon" href="media/apple-touch-icon.png"> 
-	<link rel="stylesheet" href="media/css/style.css">
+	<link rel="icon" type="image/png" href="/media/img/favicon.png"> 
+	<link rel="stylesheet" href="/media/css/style.css">
+	
 	{% block css %}{% endblock %}	
 	
 	<!-- CSS scripting & LabJS only-->
-	<script src="media/js/mom.js"></script>
+	<script src="/media/mom/js/mom.js"></script>
 </head>
 
 
@@ -54,7 +54,7 @@
 							data-via="cloudpanic">Tweet</a>
 							
 						{# facebook #}
-						<iframe src="http://www.facebook.com/plugins/like.php?href={{page.full_url|escape}}&amp;layout=box_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:65px;" allowTransparency="true"></iframe>
+						<iframe id="facebook" frameborder="0" src="http://www.facebook.com/plugins/like.php?href={{page.full_url|escape}}&amp;layout=box_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=65" scrolling="no" allowTransparency="true"></iframe>
 					</div>
 							 
 					<div id="facts" class="clear {{page.facts}}">
@@ -95,7 +95,7 @@
 			
 			<div id="marketing-crap">
 				<strong>Next story that matters</strong> 
-				<h2 id="after">2010 11 15 10:00:00 GMT+0200</h2> 
+				<h2 id="after">Tue, 30 Nov 2010 09:00:00 +0200</h2> 
 				<a href="http://twitter.com/cloudpanic">Hear about it!</a>
 			</div>
 		
@@ -111,7 +111,7 @@
 			
 	<script>	
 	$LAB{% block lab %}{% endblock %}
-	.script("media/js/site.js")
+	.script("/media/js/site.js")
 	.script("http://platform.twitter.com/widgets.js")
 	.script("http://www.google-analytics.com/ga.js").wait(function() {		
 		{% if analytics %}
