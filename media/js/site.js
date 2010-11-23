@@ -41,10 +41,12 @@
 	// activate correct link 
 	var els = byId("navi").getElementsByTagName("a"),
 		 forward = byId("forward"),
-		 path = location.pathname;
-
+		 path = location.pathname,
+		 page = path = path.substring(path.lastIndexOf("/") + 1) || "index.html";
+	
 	for (var i = 0; i < els.length; i++) {
-	  if (els[i].getAttribute("href") == path.substring(path.lastIndexOf("/") + 1)) {
+	
+	  if (els[i].getAttribute("href") == page) {
 		 els[i].className = "active";
 		 els[i].onclick = function() { return false; }
 		 

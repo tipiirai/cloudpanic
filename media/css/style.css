@@ -71,13 +71,12 @@ body {
 #title h1 {
 	background-position:0 -53px;
 	padding:22px 0 0 163px;
-	letter-spacing:-5px;
+	letter-spacing:-3px;
 }
 
 
 .panic #title h1 {
 	background-position:-9px -151px;
-	letter-spacing:-5px;
 	padding:27px 0 0 69px;	
 }
 
@@ -234,6 +233,7 @@ h2 em {
 	padding:15px;	
 }
 
+
 .navi {
 	width:235px;	
 	padding-right:0;
@@ -253,14 +253,14 @@ h2 em {
 	margin-bottom:1px;
 }
  
-.cloud #incloud, .panic #inpanic.active {
+.cloud #incloud, .panic #inpanic {
 	border-color:#333;
 }
 
 .navi a {
 	display:block;
 	float:left;
-	width:105px;
+	width:100px;
 	padding:3px 0;
 	color:#111;
 	font-size:11px;
@@ -311,12 +311,11 @@ h2 em {
 	font-weight:bold;
 	margin-top:41px;
 	float:left;
-	letter-spacing:-2px;
+	letter-spacing:-1px;
 }
 
 #marketing-crap h2 span {
 	font-size:70px;	
-	margin-right:-7px;
 }
 
 #marketing-crap a {
@@ -326,7 +325,7 @@ h2 em {
 	height:20px;
 	margin-top:20px;
 	text-indent:-9999em;
-	width:194px;
+	width:130px;
 }
 
 #footer {
@@ -352,3 +351,15 @@ h2 em {
 .lt1024 #wrap 		{ width:982px;	 } 
 .lt1024 #facts 	{ padding:10px 54px 0; }
 .lt1024 #marketing-crap	{ width: 395px; }
+
+
+/* routing */
+#about #incloud {
+	border-color:#fff;		
+}
+
+#about #title h1 {
+	background-image:none;
+	letter-spacing:-1px;
+	padding:0;	
+}
