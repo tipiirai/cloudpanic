@@ -12,18 +12,19 @@
 		diff = Math.abs(diff);
 	
 		function str(futur, past, val)  {
-			return (future ? futur : past).replace("_", val);		
+			return (future ? futur : past).replace("_", "<span>" + val + "</span>");		
 		} 
 		
 		return diff < 86400 && (
 				 diff < 60 && "just now" ||
-				 diff < 120 && (future ? "after a minute" : "1 minute ago") ||
-				 diff < 3600 && str("after _ minutes", "_ minutes ago", Math.floor( diff / 60 )) ||
-				 diff < 7200 && (future ? "after one hour" : "1 hour ago") ||
-				 diff < 86400 && str("after _ hours", "_ hours ago", Math.floor(diff / 3600))) ||
+				 diff < 120 && (future ? "a minute" : "1 minute ago") ||
+				 diff < 3600 && str("_ minutes", "_ minutes ago", Math.floor( diff / 60 )) ||
+				 diff < 7200 && (future ? "one hour" : "1 hour ago") ||
+				 diff < 86400 && str("_ hours", "_ hours ago", Math.floor(diff / 3600))) ||
 				 day_diff == 1 && (future ? "Tomorrow" : "Yesterday") ||
-				 day_diff < 7 && str("after _ days", "_ days ago", day_diff) ||
-				 str("after _ weeks", "_ weeks ago", Math.ceil( day_diff / 7 ));
+				 day_diff < 7 && str("_ days", "_ days ago", day_diff) ||
+				 day_diff == 7 && (future ? "a week" : "week ago") ||
+				 str("_ weeks", "_ weeks ago", Math.ceil( day_diff / 7 ));
 	}
 	
 	function byId(id) {
@@ -55,7 +56,7 @@
 		 if (crap && !sibling) lbl = "Next story is around the corner";
 
 		 forward.setAttribute("href", next.getAttribute("href"));
-		 forward.innerHTML = "<em>" +lbl+ ":</em> " + next.innerHTML + "&raquo;";
+		 forward.innerHTML = "<em>" +lbl+ ":</em> " + next.innerHTML + "<span></span>";
 	  }
 	}
 	

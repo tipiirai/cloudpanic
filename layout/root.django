@@ -31,13 +31,11 @@
 		
 		<div id="story" class="clear" style="background:{{page.bg}}">
 			
-			<a id="forward" href="flash.html"><em>next crap:</em> Flash &raquo;</a>
+			<a id="forward" href="flash.html"><em>next crap:</em> Flash</a>
 			
 			<div id="content">
 			 
-				<div id="title">
-					<h3>{% block title %}{% endblock %}</h3>
-					
+				<div id="title">					
 					<h1>{{page.title|typogrify}}</h1>
 					
 					<h2>
@@ -86,16 +84,16 @@
 			
 			<div id="inpanic" class="navi">
 				<h3>Crap to ignore</h3>
-				
-				<a href="enterprise-solutions.html">Enterprise solutions</a> 
+ 
 				<a href="sap.html">SAP</a>
 				<a href="java.html">Java</a>
 				<a href="flash.html">Flash</a>  
+				<a href="enterprise-solutions.html">Enterprise solutions</a>
 			</div>
 			
 			<div id="marketing-crap">
 				<strong>Next story that matters</strong> 
-				<h2 id="after">Tue, 30 Nov 2010 09:00:00 +0200</h2> 
+				<h2 id="after">Fri, 3 Dec 2010 09:00:00 +0200</h2> 
 				<a href="http://twitter.com/cloudpanic">Hear about it!</a>
 			</div>
 		

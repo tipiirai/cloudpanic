@@ -2,8 +2,9 @@
 {% include "mom/css/reset.css" %}
 {% include "mom/css/normalize.css" %}
 
+
 body {
-	background:#fff url(../img/pattern.jpg);
+	background:#fff url(../img/bg.jpg);
 }
 	
 #wrap {
@@ -13,14 +14,14 @@ body {
 
 /*{{{ head */
 
+#logo, #forward span, #title h1, #links a, .navi h3, #marketing-crap strong, #marketing-crap a {
+	background:url(../img/sprite.png) no-repeat;		
+}
+
 #logo {
-	color:#000;
 	display:block;
-	font-size:14px;
-	letter-spacing:5px;
-	text-decoration:none;
 	padding:7px;	
-	text-align:center;
+	text-indent:-999em;
 }
 
 #logo strong {
@@ -38,14 +39,22 @@ body {
 
 /*{{{ story */
 
+#story, .navi, #marketing-crap {
+	border:4px solid #fff;
+	-moz-box-shadow: 0 0 10px #999;
+	-webkit-box-shadow: 0 0 10px #999;		
+}
+
 #story {
-	border:7px solid #fff;
 	background-color:#333;
 	position:relative;
 	top:-1px;	
-	-moz-box-shadow: 0 0 10px #999;
-	-webkit-box-shadow: 0 0 10px #999;
 }
+
+.no-boxshadow #story {
+	border:1px solid #ccc;		
+}
+
 
 /* total height 640 */
 #content {	
@@ -59,21 +68,41 @@ body {
 	background-color:rgba(0,0,0,.4);	
 }
 
+#title h1 {
+	background-position:0 -53px;
+	padding:22px 0 0 163px;
+	letter-spacing:-5px;
+}
+
+
+.panic #title h1 {
+	background-position:-9px -151px;
+	letter-spacing:-5px;
+	padding:27px 0 0 69px;	
+}
+
 .no-rgba #title h2 {
 	background-color:#333;		
 	padding:5px;
 	margin-top:-5px;
 }
 
-#forward {
-	float:right;		
-	margin:10px;
+#forward {	
 	color:#fff;
+	display:block;
+	float:right;
 	font-weight:bold;
+	margin:10px;
+	padding-right:10px;
+	font-size:11px;
+}
+
+#forward span {
+	background-position:-7px -26px;
+	padding:5px 4px;
 }
 
 #forward em {
-	color:#bbb;
 	font-style:normal;
 	font-weight:normal;
 }
@@ -83,6 +112,7 @@ h1 {
 	font-size:60px;
 	text-shadow:0 0 1px #000;
 	font-weight:bold;
+	margin-bottom:0;
 }
 
 h2 {
@@ -120,10 +150,13 @@ h2 em {
 }
 
 #facts {	
+	padding:10px 80px 0;
+	margin:0 -100px;
 	background-color:#222;	
 	background-color:rgba(0,0,0,0.5);
-	padding:10px 80px 0 80px;
-	margin:0 -100px;
+	background-image: -moz-linear-gradient(rgba(27, 27, 27, 0.1), rgba(0, 0, 0, 0.5));
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(27, 27, 27, 0.1)), to(rgba(0, 0, 0, 0.5)));
+	
 }
 
 #share {
@@ -168,26 +201,20 @@ h2 em {
 
 /*{{{ links */
 #links {
-	background-color:#0C396F;
+	background-color:#333;
 	padding:4px;
 	text-align:center;
-	border-top:1px solid #486B9A;
-}
-
-#links strong {
-	color:#999;
-	margin-right:15px;
 }
 
 #links a {
-	background:url(http://dribbble.com/images/icon-short16.png) no-repeat 0 center;
-	padding-left:18px;
-	color:#999;
+	background-position:0 -31px;
+	color:#999999;
 	font-size:11px;
-	margin:0 5px;	
+	margin:0 5px;
+	padding-left:18px;
 }
 
-#links a small {
+#links small {	
 	color:#fff;
 	font-size:11px;
 }
@@ -201,53 +228,51 @@ h2 em {
 	margin-top:15px;		
 }
 
-.navi {
-	background-image: -moz-radial-gradient(center, circle farthest-corner, #fff 0, #ccc);
-	width:200px;
-	height:120px;
+.navi, #marketing-crap {
 	float:left;
-	padding:15px;
-	border:7px solid #fff;
+	height:120px;
+	padding:15px;	
+}
+
+.navi {
+	width:235px;	
+	padding-right:0;
 	margin-right:15px;
-	-moz-box-shadow: 0 0 6px #ccc;
-	-webkit-box-shadow: 0 0 6px #ccc;
+	background-image: -moz-linear-gradient(#f9f9f9, #ddd);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9), to(#ddd));
+}
+
+#inpanic h3 {
+	background-position:-5px -300px;		
 }
 
 .navi h3 {
-	color:#777;
-	font-size:16px;
-	font-weight:normal;
-	margin:-6px 0 3px;
+	background-position:-5px -250px;
+	padding-bottom:25px;
+	text-indent:-999em;
+	margin-bottom:1px;
 }
-
-.active h3 {
-	color:#555;
-	text-shadow:0 0 3px #fff;
+ 
+.cloud #incloud, .panic #inpanic.active {
+	border-color:#333;
 }
 
 .navi a {
 	display:block;
+	float:left;
+	width:105px;
 	padding:3px 0;
 	color:#111;
 	font-size:11px;
 }
 
 .navi a.active {
-	background-color:#333;
-	background-color:rgba(0,0,0,0.6);
-	text-shadow:0 0 1px #000;
-	color:#fff;
-	margin:0 -20px;
-	padding:4px 0;
-	padding-left:20px;
+	font-weight:bold;
+	color:#000;
 	text-decoration:none;
 	cursor:default;
-	font-weight:bold;
 }
 
-#incloud a.active {
-	background-color:rgba(2, 81, 164, 0.6);	
-}
 /*}}}*/
 
 
@@ -261,32 +286,47 @@ h2 em {
 /*{{{ foot */
 
 #marketing-crap {
-	background:#fff;
-	border:1px solid #ddd;
 	float:right;
-	padding:44px 10%;
-	width:26%;
+	width:440px;	
+	background-color: #101D30;
+	background-image: -moz-linear-gradient(#101D30, #2F4366);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#101D30), to(#2F4366));   
 }
 
+
 #marketing-crap strong {
-	color:#333;		
-	font-weight:normal;
+	background-position:20px -395px;
+	display:block;
+	float:left;
+	height:56px;
+	margin-top:25px;
+	text-indent:-9999em;
+	width:240px;
 }
 
 #marketing-crap h2 {
-	font-weight:bold;
-	color:#777;
+	color:#fff;
 	font-size:32px;
-	text-shadow:0 0 1px #fff;
+	text-shadow:0 0 1px #000;
+	font-weight:bold;
+	margin-top:41px;
+	float:left;
+	letter-spacing:-2px;
+}
+
+#marketing-crap h2 span {
+	font-size:70px;	
+	margin-right:-7px;
 }
 
 #marketing-crap a {
-	background:url(../img/twitter-thumb.png) no-repeat scroll 0 5px transparent;
-	color:#006AEA;
+	background-position:-11px -355px;
 	display:block;
-	font-size:14px;
-	padding:5px 0 5px 22px;
-	text-shadow:0 0 3px #FFFFFF;
+	float:right;
+	height:20px;
+	margin-top:20px;
+	text-indent:-9999em;
+	width:194px;
 }
 
 #footer {
@@ -310,9 +350,5 @@ h2 em {
 /* smaller screens */
 
 .lt1024 #wrap 		{ width:982px;	 } 
-.lt1024 #facts 	{ padding:10px 64px 0; }
-
-
-
-
-
+.lt1024 #facts 	{ padding:10px 54px 0; }
+.lt1024 #marketing-crap	{ width: 395px; }

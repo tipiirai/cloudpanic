@@ -13,8 +13,8 @@ BACKUPS_DIR = os.path.join(ROOT_PATH, 'backups')
 BACKUP = False
 
 SITE_ROOT = ""
-SITE_WWW_URL = "http://www.cloudpanic.com"
-SITE_NAME = "Cloudpanic : Things to master. Things to ignore."
+SITE_WWW_URL = "http://cloudpanic.com"
+SITE_NAME = "Cloudpanic : Technologies to master. Crap to ignore."
 SITE_AUTHOR = "tipiirai (Tero Piirainen)"
 
 #Url Configuration
@@ -42,8 +42,7 @@ APPEND_SLASH = False
  	
 
 CONTEXT = {
-	'dev'  		: True,
-	'analytics'	: "", # Google Analytics id
+	'analytics'	: "UA-19863497-1", # Google Analytics id
 	'keywords' 	: "IT trends, technology trends, computing trends, cloud trends, cloud technologies, sap sucks"
 }
 
