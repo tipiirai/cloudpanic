@@ -11,7 +11,7 @@
 	<meta name="author" content="{{site.author}}">	
 	
 	<link rel="icon" type="image/png" href="/media/img/favicon.png"> 
-	<link rel="stylesheet" href="/media/css/style.css">
+	<link rel="stylesheet" href="/media/css/style.css?v=1">
 	
 	{% block css %}{% endblock %}	
 	
@@ -48,6 +48,7 @@
 					<div id="share">
 						{# http://twitter.com/goodies/tweetbutton #}
 						<a id="tweet" href="http://twitter.com/share" 
+							data-text="{% if page.panic %}Crap to ignore{% else %}Technology to master{% endif %}: {{page.title}} @ cloudpanic.com"
 							class="twitter-share-button" data-count="vertical" 
 							data-via="cloudpanic">Tweet</a>
 							
