@@ -11,7 +11,7 @@
 	<meta name="author" content="{{site.author}}">	
 	
 	<link rel="icon" type="image/png" href="/media/img/favicon.png"> 
-	<link rel="stylesheet" href="/media/css/style.css?v=1">
+	<link rel="stylesheet" href="/media/css/style.css?v=3">
 	
 	{% block css %}{% endblock %}	
 	
@@ -76,7 +76,7 @@
 			<div id="incloud" class="navi active">
 				<h3>Technologies to master</h3>
 				
-				<a href="index.html">The Cloud</a>
+				<a href="cloud.html">The Cloud</a>
 				<a href="stateless-design.html">Stateless design</a>
 				<a href="services.html">Services</a>
 				<a href="javascript.html">JavaScript</a>
@@ -86,6 +86,7 @@
 			<div id="inpanic" class="navi">
 				<h3>Crap to ignore</h3>
  
+				<a href="index.html">Features</a>
 				<a href="sap.html">SAP</a>
 				<a href="java.html">Java</a>
 				<a href="flash.html">Flash</a>  
@@ -94,7 +95,7 @@
 			
 			<div id="marketing-crap">
 				<strong>Next story that matters</strong> 
-				<h2 id="after">Fri, 3 Dec 2010 09:00:00 +0200</h2> 
+				<h2 id="after">Wed, 15 Dec 2010 11:00:00 +0200</h2> 
 				<a href="http://twitter.com/cloudpanic">Hear about it!</a>
 			</div>
 		

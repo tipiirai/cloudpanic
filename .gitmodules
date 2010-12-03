@@ -1,3 +1,6 @@
 [submodule "media/mom"]
 	path = media/mom
 	url = https://github.com/tipiirai/mom.git
+[submodule "modules/headcss"]
+	path = modules/headcss
+	url = git@github.com:tipiirai/headcss.git

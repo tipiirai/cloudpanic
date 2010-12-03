@@ -1,10 +1,11 @@
 
-{% include "mom/css/reset.css" %}
-{% include "mom/css/normalize.css" %}
+{% include "css/headcss/reset.less" %}
+{% include "css/headcss/fix.less" %}
 
 
 body {
 	background:#fff url(../img/bg.jpg);
+	font:13px sans-serif,helvetica,verdana;
 }
 	
 #wrap {
@@ -260,7 +261,7 @@ h2 em {
 .navi a {
 	display:block;
 	float:left;
-	width:100px;
+	width:110px;
 	padding:3px 0;
 	color:#111;
 	font-size:11px;
