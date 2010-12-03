@@ -16,7 +16,7 @@
 	{% block css %}{% endblock %}	
 	
 	<!-- CSS scripting & LabJS only-->
-	<script src="/media/mom/js/mom.js"></script>
+	<script src="/media/js/head.min.js"></script>
 </head>
 
 
@@ -24,7 +24,7 @@
 
 	<div id="wrap" class="{% if page.panic %}panic{% else %}cloud{% endif %}">
 	
-		<a href="about.html" id="logo" title="About Cloudpanic">
+		<a href="/about.html" id="logo" title="About Cloudpanic">
 			<strong>!!</strong> cloudpanic
 			<em>Technologies to master. Crap to ignore.</em>
 		</a>
@@ -104,16 +104,15 @@
 	</div>
 	
 	<div id="footer"> 
-		<a href="about.html">About</a> &bull; 
+		<a href="/about.html">About</a> &bull; 
 		<a href="http://www.flickr.com/photos/55014838@N08/galleries/72157625062868131/">Photo credits</a> &bull;
 		<a href="http://github.com/tipiirai/cloudpanic">Source code</a> (Github)</a>
 	</div>	
 			
 	<script>	
-	$LAB{% block lab %}{% endblock %}
-	.script("/media/js/site.js")
-	.script("http://platform.twitter.com/widgets.js")
-	.script("http://www.google-analytics.com/ga.js").wait(function() {		
+	head.js("/media/js/site.js")
+		 .js("http://platform.twitter.com/widgets.js")
+		 .js("http://www.google-analytics.com/ga.js", function() {		
 		{% if analytics %}
 			var tracker = _gat._getTracker("{{analytics}}");
 			tracker._trackPageview();

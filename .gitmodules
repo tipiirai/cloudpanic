@@ -4,3 +4,6 @@
 [submodule "modules/headcss"]
 	path = modules/headcss
 	url = git@github.com:tipiirai/headcss.git
+[submodule "modules/headjs"]
+	path = modules/headjs
+	url = git@github.com:headjs/headjs.git
