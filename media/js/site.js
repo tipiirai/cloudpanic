@@ -62,7 +62,7 @@
 	  }
 	}
 	
-	if (byId("about")) {
+	if (byId("about-page")) {
 		forward.setAttribute("href", "index.html");
 		forward.innerHTML = "<em>back to</em> home <span></span>"; 	
 	} 

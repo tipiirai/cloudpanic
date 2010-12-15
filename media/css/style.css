@@ -358,17 +358,17 @@ h2 em {
 
 /* smaller screens */
 
-.lt1024 #wrap 		{ width:982px;	 } 
-.lt1024 #facts 	{ padding:10px 54px 0; }
-.lt1024 #marketing-crap	{ width: 395px; }
+.lt-1024 #wrap 				{ width:982px;	 } 
+.lt-1024 #facts 			{ padding:10px 54px 0; }
+.lt-1024 #marketing-crap	{ width: 395px; }
 
 
 /* routing */
-#about #incloud {
+#about-page #incloud {
 	border-color:#fff;		
 }
 
-#about #title h1 {
+#about-page #title h1 {
 	background-image:none;
 	letter-spacing:-1px;
 	padding:0;	

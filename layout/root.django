@@ -40,7 +40,7 @@
 					
 					<h2>
 						{{page.description}}
-						<em id="created">{{page.file.last_modified|date:"r"}}</em>
+						<em id="created">{{page.time}} +0200</em>
 					</h2>			
 				</div>
 				
