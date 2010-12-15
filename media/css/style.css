@@ -2,10 +2,18 @@
 {% include "css/headcss/reset.less" %}
 {% include "css/headcss/fix.less" %}
 
+/* clearfix */
+.clear:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
 
 body {
 	background:#fff url(../img/bg.jpg);
-	font:13px sans-serif,helvetica,verdana;
+	font:13px sans-serif;
 }
 	
 #wrap {
@@ -191,6 +199,7 @@ h2 em {
 .fact h3 {
 	font-size:16px;		
 	color:#ddd;
+	margin-bottom:-6px;
 }
 
 .fact a {
