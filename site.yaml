@@ -1,0 +1,15 @@
+mode: development
+media_root:: media
+media_url: /media
+base_url: http://cloudpanic.com
+template: hyde.ext.jinja2
+meta:
+    site_url: http://cloudpanic.com
+    extends: page.j2
+plugins:
+    - hyde.ext.plugins.meta.MetaPlugin
+    - hyde.ext.plugins.auto_extend.AutoExtendPlugin
+    - hyde.ext.plugins.less.LessCSSPlugin
+    - hyde.ext.plugins.blockdown.BlockdownPlugin
+less:
+    app: ~/local/bin/lessc
