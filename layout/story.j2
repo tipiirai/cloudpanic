@@ -1,0 +1,24 @@
+{% extends "root.j2" %}
+{% block story %}
+<div id="story" class="clear" style="background:{{meta.bg}}">
+    <a id="forward" href="{{content_url('flash.html')}}"><em>next crap:</em> Flash</a>
+    <div id="content">
+        <div id="title">
+            <h1>{{meta.title|default('')|typogrify}}</h1>
+            <h2>
+                {{meta.description|default('')|typogrify}}
+                <em id="created">{{meta.time.strftime('%a, %d %b %Y')}} +0200</em>
+            </h2>
+        </div>
+        <div id="bottom">
+            {% include "share.j2" %}
+            <div id="facts" class="clear {{meta.facts}}">
+                {%markdown%}{% block facts %}{% endblock %}{%endmarkdown%}
+            </div>
+            <div id="links" class="clear">
+                {%markdown%}{% block links %}{% endblock %}{%endmarkdown%}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

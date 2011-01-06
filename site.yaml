@@ -1,13 +1,14 @@
 mode: development
 media_root:: media
 media_url: /media
-base_url: http://cloudpanic.com
+base_url: '/'
 template: hyde.ext.jinja2
 meta:
     site_url: http://cloudpanic.com
-    extends: page.j2
+    extends: story.j2
     analytics: UA-19863497-1
     keywords: "IT trends, technology trends, computing trends, cloud trends, cloud technologies, sap sucks"
+    time: !!timestamp '2000-01-01 10:00:00'
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
     - hyde.ext.plugins.auto_extend.AutoExtendPlugin

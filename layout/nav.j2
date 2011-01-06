@@ -1,0 +1,27 @@
+{% macro nav(headline, css, in_node) %}
+<div id="{{css}}" class="navi{{ ' active' if in_node.name == node.name }}">
+    <h3>{{headline}}</h3>
+    {% for page in in_node.walk_resources_sorted(
+                                attr='meta.time', reverse=True)
+                                if page.meta.listable and page.is_processable %}
+        <a 
+            href="{{ content_url(page.relative_path) }}" 
+            {% if page.relative_path == resource.relative_path %} class="active"{% endif %}>
+            {{page.meta.title|replace('"', '')}}
+        </a>
+    {% endfor %}
+</div>
+{% endmacro %}
+<div id="navi" class="clear">
+    {%set tech = site.content.node_from_relative_path('tech') %}
+    {%set crap = site.content.node_from_relative_path('crap') %}
+
+    {{ nav('Technologies to master', 'incloud', tech) }}
+    {{ nav('Crap to ignore', 'inpanic', crap) }}
+
+    <div id="marketing-crap">
+        <strong>Next story that matters</strong>
+        <h2 id="after">Fri, 28 Jan 2011 11:00:00 +0200</h2>
+        <a href="http://twitter.com/cloudpanic">Hear about it!</a>
+    </div>
+</div>
