@@ -6,6 +6,8 @@ template: hyde.ext.jinja2
 meta:
     site_url: http://cloudpanic.com
     extends: page.j2
+    analytics: UA-19863497-1
+    keywords: "IT trends, technology trends, computing trends, cloud trends, cloud technologies, sap sucks"
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
     - hyde.ext.plugins.auto_extend.AutoExtendPlugin

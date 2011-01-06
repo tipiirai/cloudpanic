@@ -115,8 +115,8 @@
     head.js("/media/js/site.js")
          .js("http://platform.twitter.com/widgets.js")
          .js("http://www.google-analytics.com/ga.js", function() {
-        {% if analytics %}
-            var tracker = _gat._getTracker("{{analytics}}");
+        {% if resource.meta.analytics %}
+            var tracker = _gat._getTracker("{{resource.meta.analytics}}");
             tracker._trackPageview();
         {% endif %}
     });
