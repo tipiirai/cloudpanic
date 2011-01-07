@@ -2,7 +2,7 @@
 
         sudo easy_install pip
         sudo easy_install virtualenv
-        pip install virtualenvwrapper
+        sudo pip install virtualenvwrapper
 
     Note where pip installs virtualenvwrapper.
 
@@ -16,13 +16,13 @@
 3. Clone this repository
 
         git clone git@github.com:tipiirai/cloudpanic.git
-        
+
 4. Switch to the `refactor` branch
 
 5. Setup your [virtual environment](http://www.doughellmann.com/docs/virtualenvwrapper/)
-    
+
         mkvirtualenv cp
-        
+
     You can use `workon cp` to switch to the environment after the first time.
 
 6. Install the requirements:
