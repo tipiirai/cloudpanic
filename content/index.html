@@ -1,12 +1,7 @@
 ===
 extends: False
 ===
-
-{% for page in site.content.walk_resources_sorted(
-                            attr='meta.time', reverse=True)
-                            if page.meta.listable and page.is_processable %}
 <script>
+    {% set page = site.content.walk_resources_sorted_by_time()|reverse|first %}
     window.location.href = '{{ content_url(page.relative_path) }}';
 </script>
-    {% break %}
-{% endfor %}

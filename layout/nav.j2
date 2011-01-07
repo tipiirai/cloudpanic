@@ -1,11 +1,9 @@
-{% macro nav(headline, css, in_node) %}
+{% macro nav(headline, css, root) %}
 <div id="{{css}}" class="navi{{ ' active' if in_node.name == node.name }}">
     <h3>{{headline}}</h3>
-    {% for page in in_node.walk_resources_sorted(
-                                attr='meta.time', reverse=True)
-                                if page.meta.listable and page.is_processable %}
-        <a 
-            href="{{ content_url(page.relative_path) }}" 
+    {% for page in root.walk_resources_sorted_by_time()|reverse %}
+        <a
+            href="{{ content_url(page.relative_path) }}"
             {% if page.relative_path == resource.relative_path %} class="active"{% endif %}>
             {{page.meta.title|replace('"', '')}}
         </a>

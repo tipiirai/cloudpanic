@@ -1,10 +1,9 @@
 mode: development
 media_root:: media
 media_url: /media
-base_url: '/'
+base_url: /
 template: hyde.ext.jinja2
 meta:
-    site_url: http://cloudpanic.com
     extends: story.j2
     analytics: UA-19863497-1
     keywords: "IT trends, technology trends, computing trends, cloud trends, cloud technologies, sap sucks"
@@ -14,5 +13,13 @@ plugins:
     - hyde.ext.plugins.auto_extend.AutoExtendPlugin
     - hyde.ext.plugins.less.LessCSSPlugin
     - hyde.ext.plugins.blockdown.BlockdownPlugin
+    - hyde.ext.plugins.sorter.SorterPlugin
 less:
     app: ~/local/bin/lessc
+sorter:
+    time:
+        attr: meta.time
+        filters:
+            source_file.kind: html
+            meta.listable: True
+            is_processable: True
