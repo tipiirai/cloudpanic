@@ -37,34 +37,4 @@
 	el = byId("after");
 	el.innerHTML = prettytime(el.innerHTML);
 	el.className = "loaded";
-		
-	// activate correct link 
-	var els = byId("navi").getElementsByTagName("a"),
-		 forward = byId("forward"),
-		 path = location.pathname,
-		 page = path = path.substring(path.lastIndexOf("/") + 1) || "index.html";
-	
-	for (var i = 0; i < els.length; i++) {
-	
-	  if (els[i].getAttribute("href") == page) {
-		 els[i].className = "active";
-		 els[i].onclick = function() { return false; }
-		 
-		 var next = els[i + 1],
-		 	  crap = els[i].parentNode.id == "inpanic",
-		 	  sibling = els[i].nextSibling.nextSibling,
-		 	  lbl = crap || !sibling ? "Next Crap" : "Next Technology";
-		 	  
-		 if (crap && !sibling) lbl = "Next story is around the corner";
-
-		 forward.setAttribute("href", next.getAttribute("href"));
-		 forward.innerHTML = "<em>" +lbl+ ":</em> " + next.innerHTML + "<span></span>";
-	  }
-	}
-	
-	if (byId("about-page")) {
-		forward.setAttribute("href", "index.html");
-		forward.innerHTML = "<em>back to</em> home <span></span>"; 	
-	} 
-	
 })();

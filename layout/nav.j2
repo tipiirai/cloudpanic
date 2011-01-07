@@ -1,7 +1,7 @@
 {% macro nav(headline, css, root) %}
 <div id="{{css}}" class="navi{{ ' active' if in_node.name == node.name }}">
     <h3>{{headline}}</h3>
-    {% for page in root.walk_resources_sorted_by_time()|reverse %}
+    {% for page in root.walk_resources_sorted_by_time() %}
         <a
             href="{{ content_url(page.relative_path) }}"
             {% if page.relative_path == resource.relative_path %} class="active"{% endif %}>
@@ -20,6 +20,6 @@
     <div id="marketing-crap">
         <strong>Next story that matters</strong>
         <h2 id="after">Fri, 28 Jan 2011 11:00:00 +0200</h2>
-        <a href="http://twitter.com/cloudpanic">Hear about it!</a>
+        <a href="{{ meta.twitter }}">Hear about it!</a>
     </div>
 </div>

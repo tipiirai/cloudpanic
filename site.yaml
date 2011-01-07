@@ -5,6 +5,7 @@ base_url: /
 template: hyde.ext.jinja2
 meta:
     extends: story.j2
+    twitter: http://twitter.com/cloudpanic
     analytics: UA-19863497-1
     keywords: "IT trends, technology trends, computing trends, cloud trends, cloud technologies, sap sucks"
     time: !!timestamp '2000-01-01 10:00:00'
@@ -18,8 +19,10 @@ less:
     app: ~/local/bin/lessc
 sorter:
     time:
-        attr: meta.time
+        attr:
+            - meta.cloud
+            - meta.time
+        reverse: True
         filters:
             source_file.kind: html
             meta.listable: True
-            is_processable: True

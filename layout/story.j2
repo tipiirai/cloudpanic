@@ -1,7 +1,14 @@
 {% extends "root.j2" %}
 {% block story %}
 <div id="story" class="clear" style="background:{{meta.bg}}">
-    <a id="forward" href="{{content_url('flash.html')}}"><em>next crap:</em> Flash</a>
+    {% block forward %}
+    {% with %}
+        {% set rnext = resource.next_by_time %}
+        <a id="forward" href="{{ content_url(rnext.relative_path) if rnext else meta.twitter}}">
+            {% if rnext %}<em>{{ 'Next Crap' if rnext.meta.panic else 'Next Technology' }}:</em>{{ rnext.meta.title|replace('"', '') }}{% else %}<em>Next story is around the corner</em>{% endif %}<span></span>
+        </a>
+    {% endwith %}
+    {% endblock %}
     <div id="content">
         <div id="title">
             <h1>{{meta.title|default('')|typogrify}}</h1>
