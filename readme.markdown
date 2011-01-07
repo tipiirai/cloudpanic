@@ -7,8 +7,9 @@
     Note where pip installs virtualenvwrapper.
 
 2. Add the following two lines to your shell startup file(`~/.bash_profile` for example).
-
+        
         export WORKON_HOME=~/.virtualenv
+        mkdir -p $WORKON_HOME
         source </usr/local/bin>/virtualenvwrapper.sh
 
     Ensure that the `virtualenvwrapper.sh` file is prefixed with the path noted in step 1.
@@ -19,7 +20,12 @@
 
 4. Switch to the `refactor` branch
 
-5. Setup your [virtual environment](http://www.doughellmann.com/docs/virtualenvwrapper/)
+5. Update submodules
+
+        git submodule init
+        git submodule update
+
+6. Setup your [virtual environment](http://www.doughellmann.com/docs/virtualenvwrapper/)
 
         mkvirtualenv cp
 
