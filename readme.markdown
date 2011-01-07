@@ -27,5 +27,5 @@
 
 6. Install the requirements:
 
-    cd ~/path/to/this/repo
-    pip install -r requirements.txt
+        cd ~/path/to/this/repo
+        pip install -r requirements.txt
