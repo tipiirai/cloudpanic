@@ -2,9 +2,9 @@ Jinja2==2.5.5
 Markdown==2.0.3
 PyYAML==3.09
 commando==0.1.1a
--e git+https://lakshmivyas@github.com/hydehub/hyde.git@f54f0bfe8d6d03e78910db3c759185fecee1edea#egg=hyde-0.6.0-py2.7-dev
+-e git://github.com/hydepy/hyde.git#egg=hyde
 smartypants==1.6.0.3
--e git://github.com/hydepy/typogrify.git@d958e970d985f88dae5995ffd2454b979521ab7b#egg=typogrify-1.0.1a-py2.7-dev
+-e git://github.com/hydepy/typogrify.git@d958e970d985f88dae5995ffd2454b979521ab7b#egg=typogrify
 virtualenv==1.4.9
 virtualenvwrapper==2.4
 wsgiref==0.1.2
