@@ -3,8 +3,8 @@
     <h3>{{headline}}</h3>
     {% for page in root.walk_resources_sorted_by_time() %}
         <a
-            href="{{ content_url(page.relative_path) }}"
-            {% if page.relative_path == resource.relative_path %} class="active"{% endif %}>
+            href="{{ content_url(page.url) }}"
+            {% if page.url == resource.url %} class="active"{% endif %}>
             {{page.meta.title|replace('"', '')}}
         </a>
     {% endfor %}

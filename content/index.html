@@ -3,14 +3,5 @@ extends: False
 ===
 <script>
     {% set page = site.content.walk_resources_sorted_by_time()|first %}
-    window.location.href = '{{ content_url(page.relative_path) }}';
+    window.location.href = '{{ content_url(page.url) }}';
 </script>
-<ul>
-{% for res in site.content.walk_resources_sorted_by_time() %}
-<li>
-Prev = {{ res.prev_by_time.name }}
-This = {{ res.name }}
-Next = {{res.next_by_time.name}}
-</li>
-{% endfor %}
-</ul>

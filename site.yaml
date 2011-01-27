@@ -11,6 +11,7 @@ meta:
     time: !!timestamp '2000-01-01 10:00:00'
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
+    - hyde.ext.plugins.folders.FlattenerPlugin
     - hyde.ext.plugins.auto_extend.AutoExtendPlugin
     - hyde.ext.plugins.less.LessCSSPlugin
     - hyde.ext.plugins.blockdown.BlockdownPlugin
@@ -26,3 +27,11 @@ sorter:
         filters:
             source_file.kind: html
             meta.listable: True
+flattener:
+    items:
+        -
+            source: tech
+            target: ''
+        -
+            source: crap
+            target: ''
