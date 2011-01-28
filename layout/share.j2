@@ -3,5 +3,5 @@
         data-text="{{ 'Crap to ignore' if meta.panic else 'Technology to master' }}: {{meta.title}} @ cloudpanic.com"
         class="twitter-share-button" data-count="vertical"
         data-via="cloudpanic">Tweet</a>
-    <iframe id="facebook" frameborder="0" src="http://www.facebook.com/plugins/like.php?href={{resource.full_url|escape}}&amp;layout=box_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=65" scrolling="no" allowTransparency="true"></iframe>
+    <iframe id="facebook" frameborder="0" src="http://www.facebook.com/plugins/like.php?href={{ content_url(resource.url) }}&amp;layout=box_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=65" scrolling="no" allowTransparency="true"></iframe>
 </div>
