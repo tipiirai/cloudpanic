@@ -1,0 +1,39 @@
+mode: development
+media_root: media
+deploy_root: ../tipiirai.github.com
+
+media_url: /media
+base_url: http://cloudpanic.com/
+template: hyde.ext.jinja2
+meta:
+    extends: story.j2
+    twitter: http://twitter.com/cloudpanic
+    analytics: UA-19863497-1
+    keywords: "IT trends, technology trends, computing trends, cloud trends, cloud technologies, sap sucks"
+    time: !!timestamp '2000-01-01 10:00:00'
+plugins:
+    - hyde.ext.plugins.meta.MetaPlugin
+    - hyde.ext.plugins.folders.FlattenerPlugin
+    - hyde.ext.plugins.auto_extend.AutoExtendPlugin
+    - hyde.ext.plugins.less.LessCSSPlugin
+    - hyde.ext.plugins.blockdown.BlockdownPlugin
+    - hyde.ext.plugins.sorter.SorterPlugin
+less:
+    app: ~/local/bin/lessc
+sorter:
+    time:
+        attr:
+            - meta.cloud
+            - meta.time
+        reverse: True
+        filters:
+            source_file.kind: html
+            meta.listable: True
+flattener:
+    items:
+        -
+            source: tech
+            target: ''
+        -
+            source: crap
+            target: ''

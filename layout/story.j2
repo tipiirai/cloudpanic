@@ -1,0 +1,31 @@
+{% extends "root.j2" %}
+{% block story %}
+<div id="story" class="clear" style="background:{{meta.bg}}">
+    {% block forward %}
+    {% with %}
+        {% set rnext = resource.next_by_time %}
+        <a id="forward" href="{{ content_url(rnext.relative_path) if rnext else meta.twitter}}">
+            {% if rnext %}<em>{{ 'Next Crap' if rnext.meta.panic else 'Next Technology' }}:</em>{{ rnext.meta.title|replace('"', '') }}{% else %}<em>Next story is around the corner</em>{% endif %}<span></span>
+        </a>
+    {% endwith %}
+    {% endblock %}
+    <div id="content">
+        <div id="title">
+            <h1>{{meta.title|default('')}}</h1>
+            <h2>
+                {{meta.description|default('')}}
+                <em id="created">{{meta.time.strftime('%a, %d %b %Y %H:%M:%S')}} +0200</em>
+            </h2>
+        </div>
+        <div id="bottom">
+            {% include "share.j2" %}
+            <div id="facts" class="clear {{meta.facts}}">
+                {%markdown%}{% block facts %}{% endblock %}{%endmarkdown%}
+            </div>
+            <div id="links" class="clear">
+                {%markdown%}{% block links %}{% endblock %}{%endmarkdown%}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

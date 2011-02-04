@@ -1,0 +1,25 @@
+{% macro nav(headline, css, root) %}
+<div id="{{css}}" class="navi{{ ' active' if in_node.name == node.name }}">
+    <h3>{{headline}}</h3>
+    {% for page in root.walk_resources_sorted_by_time() %}
+        <a
+            href="{{ content_url(page.url) }}"
+            {% if page.url == resource.url %} class="active"{% endif %}>
+            {{page.meta.title|replace('"', '')}}
+        </a>
+    {% endfor %}
+</div>
+{% endmacro %}
+<div id="navi" class="clear">
+    {%set tech = site.content.node_from_relative_path('tech') %}
+    {%set crap = site.content.node_from_relative_path('crap') %}
+
+    {{ nav('Technologies to master', 'incloud', tech) }}
+    {{ nav('Crap to ignore', 'inpanic', crap) }}
+
+    <div id="marketing-crap">
+        <strong>Next story that matters</strong>
+        <h2 id="after">Fri, 1 Apr 2011 11:00:00 +0200</h2>
+        <a href="{{ meta.twitter }}">Hear about it!</a>
+    </div>
+</div>

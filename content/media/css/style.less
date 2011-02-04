@@ -1,0 +1,372 @@
+@import "headcss/reset.less";
+@import "headcss/fix.less";
+
+/* clearfix */
+.clear:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+body {
+    background:#fff url({{media_url('img/bg.jpg')}});
+    font:13px sans-serif;
+}
+
+#wrap {
+    margin:0 auto;
+    width:1024px;
+}
+
+
+#logo, #forward span, #title h1, #links a, .navi h3, #marketing-crap strong, #marketing-crap a {
+    background:url({{media_url('img/sprite.png')}}) no-repeat;
+}
+
+#logo {
+    display:block;
+    padding:7px;
+    text-indent:-999em;
+}
+
+#logo strong {
+    color:red;
+    letter-spacing:0;
+}
+
+#logo em {
+    color:#777;
+    letter-spacing:0;
+    font-style:normal;
+}
+
+#story, .navi, #marketing-crap {
+    border:4px solid #fff;
+    -moz-box-shadow: 0 0 10px #999;
+    -webkit-box-shadow: 0 0 10px #999;
+}
+
+#story {
+    background-color:#333;
+    position:relative;
+    top:-1px;
+}
+
+.no-boxshadow #story {
+    border:1px solid #ccc;
+}
+
+
+/* total height 640 */
+#content {
+    padding:50px 100px 0 100px;
+    background-image: -moz-radial-gradient(center, circle farthest-corner, transparent 0, #000);
+    background: -webkit-gradient(radial, center center, 10, center center, 500, from(transparent), to(#000));
+    height:590px;
+}
+
+.no-gradient #content {
+    background-color:rgba(0,0,0,.4);
+}
+
+#title h1 {
+    background-position:0 -53px;
+    padding:22px 0 0 163px;
+    letter-spacing:-3px;
+}
+
+
+.panic #title h1 {
+    background-position:-9px -151px;
+    padding:27px 0 0 69px;
+}
+
+.no-rgba #title h2 {
+    background-color:#333;
+    padding:5px;
+    margin-top:-5px;
+}
+
+#forward {
+    color:#fff;
+    display:block;
+    float:right;
+    font-weight:bold;
+    margin:10px;
+    padding-right:10px;
+    font-size:11px;
+}
+
+#forward span {
+    background-position:-7px -26px;
+    padding:5px 4px;
+}
+
+#forward em {
+    font-style:normal;
+    font-weight:normal;
+}
+
+h1 {
+    color:#fff;
+    font-size:60px;
+    text-shadow:0 0 1px #000;
+    font-weight:bold;
+    margin-bottom:0;
+}
+
+h2 {
+    color:#eee;
+    font-size:25px;
+    text-shadow:0 0 2px #000;
+    line-height:30px;
+}
+
+h3 {
+    color:#85A0FF;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.panic h3 {
+    color:red;
+}
+
+
+h2 em {
+    color:#999;
+    font-style:normal;
+    display:block;
+    font-size:18px;
+}
+
+
+#bottom {
+    position:absolute;
+    bottom:0;
+}
+
+#facts {
+    padding:10px 80px 0;
+    margin:0 -100px;
+    background-color:#222;
+    background-color:rgba(0,0,0,0.5);
+    background-image: -moz-linear-gradient(rgba(27, 27, 27, 0.1), rgba(0, 0, 0, 0.5));
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(27, 27, 27, 0.1)), to(rgba(0, 0, 0, 0.5)));
+
+}
+
+#links p{
+    margin:0;
+    padding:0;
+}
+
+#share {
+    margin-top:100px;
+    font-size:11px;
+    color:#ddd;
+}
+
+.twitter-share-button {
+    position:relative;
+    top:-5px;
+    margin-right:10px;
+}
+#facts ul{
+    padding:0;
+    margin:0;
+}
+#facts li {
+    list-style-type:none;
+}
+
+.fact, #facts li {
+    float:left;
+    margin:0 20px;
+    font-size:11px;
+    width:243px;
+    color:#eee;
+    padding:10px 0 12px 0;
+}
+
+.two .fact,
+.two#facts  li{
+    width:380px;
+}
+
+.four .fact,
+.four#facts  li {
+    width:170px;
+}
+
+.fact h3,
+#facts h3 {
+    font-size:16px;
+    color:#ddd;
+    margin-bottom:-6px;
+}
+
+.fact a,
+#facts a {
+    color:yellow;
+}
+
+#links {
+    background-color:#333;
+    padding:4px;
+    text-align:center;
+}
+
+#links a {
+    background-position:0 -31px;
+    color:#999999;
+    font-size:11px;
+    margin:0 5px;
+    padding-left:18px;
+}
+
+#links em {
+    color:#fff;
+    font-size:11px;
+    font-style: normal;
+}
+
+#navi {
+    margin-top:15px;
+}
+
+.navi, #marketing-crap {
+    float:left;
+    height:120px;
+    padding:15px;
+}
+
+
+.navi {
+    width:235px;
+    padding-right:0;
+    margin-right:15px;
+    background-image: -moz-linear-gradient(#f9f9f9, #ddd);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9), to(#ddd));
+}
+
+#inpanic h3 {
+    background-position:-5px -300px;
+}
+
+.navi h3 {
+    background-position:-5px -250px;
+    padding-bottom:25px;
+    text-indent:-999em;
+    margin-bottom:1px;
+}
+
+.cloud #incloud, .panic #inpanic {
+    border-color:#333;
+}
+
+.navi a {
+    display:block;
+    float:left;
+    width:110px;
+    padding:3px 0;
+    color:#111;
+    font-size:11px;
+}
+
+.navi a.active {
+    font-weight:bold;
+    color:#000;
+    text-decoration:none;
+    cursor:default;
+}
+
+
+#facebook {
+    border:none;
+    overflow:hidden;
+    width:450px;
+    height:65px;
+}
+
+
+#marketing-crap {
+    float:right;
+    width:440px;
+    background-color: #101D30;
+    background-image: -moz-linear-gradient(#101D30, #2F4366);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#101D30), to(#2F4366));
+}
+
+
+#marketing-crap strong {
+    background-position:20px -395px;
+    display:block;
+    float:left;
+    height:56px;
+    margin-top:25px;
+    text-indent:-9999em;
+    width:240px;
+}
+
+#marketing-crap h2 {
+    color:#fff;
+    font-size:32px;
+    text-shadow:0 0 1px #000;
+    font-weight:bold;
+    margin-top:41px;
+    float:left;
+    letter-spacing:-1px;
+}
+
+#marketing-crap h2 span {
+    font-size:70px;
+}
+
+#marketing-crap a {
+    background-position:-11px -355px;
+    display:block;
+    float:right;
+    height:20px;
+    margin-top:20px;
+    text-indent:-9999em;
+    width:130px;
+}
+
+#footer {
+    padding:12px 0;
+    font-size:11px;
+    color:#777;
+    text-align:center;
+}
+
+#footer em {
+    font-style:normal;
+    color:#333;
+}
+
+#footer a {
+    color:#0E478C;
+}
+
+
+
+/* smaller screens */
+
+.lt-1024 #wrap              { width:982px;   }
+.lt-1024 #facts             { padding:10px 54px 0; }
+.lt-1024 #marketing-crap    { width: 395px; }
+
+
+/* routing */
+#about-page #incloud {
+    border-color:#fff;
+}
+
+#about-page #title h1 {
+    background-image:none;
+    letter-spacing:-1px;
+    padding:0;
+}
