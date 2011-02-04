@@ -1,5 +1,7 @@
 mode: development
-media_root:: media
+media_root: media
+deploy_root: github.com
+
 media_url: /media
 base_url: http://cloudpanic.com/
 template: hyde.ext.jinja2
