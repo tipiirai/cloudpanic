@@ -1,0 +1,3 @@
+extends: site.yaml
+base_url: /
+deploy_root: deploy
