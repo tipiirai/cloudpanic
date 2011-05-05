@@ -1,3 +1,4 @@
+cloudpanic: panic
 panic: True
 cloud: False
 listable: True
