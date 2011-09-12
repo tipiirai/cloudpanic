@@ -11,6 +11,7 @@ meta:
     analytics: UA-19863497-1
     keywords: "IT trends, technology trends, computing trends, cloud trends, cloud technologies, sap sucks"
     time: !!timestamp '2000-01-01 10:00:00'
+    group: None
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
     - hyde.ext.plugins.folders.FlattenerPlugin
@@ -18,17 +19,31 @@ plugins:
     - hyde.ext.plugins.less.LessCSSPlugin
     - hyde.ext.plugins.blockdown.BlockdownPlugin
     - hyde.ext.plugins.sorter.SorterPlugin
+    - hyde.ext.plugins.grouper.GrouperPlugin
 less:
     app: /usr/bin/less
 sorter:
     time:
         attr:
-            - meta.cloud
             - meta.time
         reverse: True
         filters:
             source_file.kind: html
             meta.listable: True
+grouper:
+    cloudpanic:
+        sorter: time
+        groups:
+            -
+                name: cloud
+            -
+                name: panic
+publisher:
+    github:
+        type: hyde.ext.publishers.dvcs.Git
+        path: ../tipiirai.github.com
+        url: git@github.com:tipiirai/tipiirai.github.com.git
+        branch: master
 flattener:
     items:
         -

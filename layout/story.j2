@@ -3,18 +3,17 @@
 <div id="story" class="clear" style="background:{{meta.bg}}">
     {% block forward -%}
     {% with -%}
-        {% set rnext = resource.next_by_time -%}
-        <a id="forward"
-            href="{{ content_url(
-                        rnext.relative_deploy_path) if rnext else meta.twitter }}">
-            {% if rnext -%}
-            <em>
-                {{ 'Next Crap' if rnext.meta.panic else 'Next Technology' }}:
-            </em>{{ rnext.meta.title|replace('"', '') }}
-            {% else -%}
-            <em>Next story is around the corner</em>{%- endif %}
-            <span></span>
-        </a>
+        {% set rnext = resource.next_in_cloudpanic -%}
+        {% set lnext = 'Next story is around the corner' if not rnext
+                            else 'Next Crap' if rnext.meta.panic
+                                else 'Next Technology' -%}
+        {% set lnext = '<em>'~lnext~'</em>' -%}
+        {% if rnext -%}
+        {% set lnext = lnext~':'~rnext.meta.title|replace('"', '') -%}
+        {%- endif %}
+        {% set unext = content_url( rnext.relative_deploy_path) if rnext
+                            else meta.twitter %}
+        <a id="forward" href="{{ unext }}">{{ lnext }}<span></span></a>
     {% endwith %}
     {% endblock %}
     <div id="content">
