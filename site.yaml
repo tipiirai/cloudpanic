@@ -19,7 +19,7 @@ plugins:
     - hyde.ext.plugins.blockdown.BlockdownPlugin
     - hyde.ext.plugins.sorter.SorterPlugin
 less:
-    app: ~/local/bin/lessc
+    app: /usr/bin/less
 sorter:
     time:
         attr:

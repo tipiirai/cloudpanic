@@ -1,3 +1,4 @@
+.hyde_deps: [root.j2, story.j2, nav.j2, share.j2]
 404.html: [root.j2, story.j2, nav.j2, share.j2]
 about.html: [root.j2, story.j2, nav.j2, share.j2]
 crap/enterprise-solutions.html: [root.j2, story.j2, nav.j2, share.j2]
